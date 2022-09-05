@@ -1,0 +1,131 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  
+  --col-01:#b45b90;
+  --col-02:#f8f9f7;
+  --col-03:#c028f26c;
+  --col-04:#e282e7;
+  font-size: 16px;
+}
+
+body{
+  padding: 1rem;
+  background-color:var(--col-02);
+  color: var(--col-01);
+  transition: background-color 1s;
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+/* This is the color of the title */
+h1,h2,h3{color: #f8c3c4;}
+
+/* This is the toggle button*/
+#modeButton{
+	width: 160px;
+	height: 50px;
+	border: 1px solid #f8c3c4;
+	cursor: pointer;
+}
+
+/*Execute the animation when the mouse moves over the a tag*/
+main a:hover{animation: changcolor 3s infinite ;}
+@keyframes changcolor{
+	10%{
+		color: rgb(100, 232, 206);
+	}
+	20%{
+		color: yellow;
+	}
+	100%{
+		color: rgb(243, 63, 35);
+	}
+}
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+}
+/*In the practice of this homework, I chose pink and purple for the color matching of the website.
+ The title color of each paragraph is the same, and the part with horizontal line uses the style of transition animation. 
+ If the color changes, the content of the horizontal line will be highlighted. , very simple design and operation.*/
