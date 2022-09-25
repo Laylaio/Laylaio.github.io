@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Video player exercise</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="player">
+	<video id="media" controls>
+		<source src="file/v.mp4" type="video/mp4">
+	</video>
+
+	<!-- video reference list: Rezepte, Essen. “Es Ist so Lecker, Dass Ich Es Fast Jeden Tag Koche Unglaubliches Hühnchen-Kartoffel-Rezept!” 7 Oct. 2021.
+		
+        source: "https://www.youtube.com/watch?v=CiNtYiBt2oQ" -->
+		
+
+	<div class="controls video-controls">
+		<!--This is the audio control-->
+		<button class="play" data-icon="A" aria-label="play pause toggle"></button>
+		<button class="stop" data-icon="G" aria-label="stop"></button>
+		<div class="timer"><div class="timer-bar"></div><span aria-label="timer" class="timer-span">00:00</span></div>
+		<button class="rwd" data-icon="<" aria-label="rewind"></button>
+		<button class="fwd" data-icon=">" aria-label="fast forward"></button>
+		<div class="voice">
+			<input type="range" min="0" max="1" step="0.1" value="0.5" onchange="changeVoice()">
+		</div>
+		<div class="multiple">
+			<div class="multipleText">Play speed</div>
+			<div class="multipleShow">
+				<ul>
+					<li onclick="changeMultiple('0.5')"><a href="javascript:;">0.5</a></li>
+					<li onclick="changeMultiple('1')"><a href="javascript:;">Normal</a></li>
+					<li onclick="changeMultiple('1.25')"><a href="javascript:;">1.25</a></li>
+					<li onclick="changeMultiple('1.5')"><a href="javascript:;">1.5</a></li>
+					<li onclick="changeMultiple('2')"><a href="javascript:;">2</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+	<script src="custom-player.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- In this exercise, I chose the cooking tutorial in the template as the theme of this time, 
+	and I added two additional functions to the player, one is to adjust the speed, 
+	the other is to adjust the volume, users can adjust the volume according to their own Need to adjust the speed of the video, 
+	when they are watching the video, I find it very convenient. -->
